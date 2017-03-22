@@ -7,7 +7,7 @@
 ## Future improvements
 ## Attributions 
 ## License 
-#### cos tu napisalem
+#### [cos tu napisalem](http://www.google.com)
 ## Credits
 Grzegorz Osak, Szymon Zieliński
 
