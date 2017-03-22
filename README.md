@@ -7,7 +7,7 @@
 ## Future improvements
 ## Attributions 
 ## License 
-#### 
+#### cos tu napisalem
 ## Credits
 Grzegorz Osak, Szymon Zieliński
 
