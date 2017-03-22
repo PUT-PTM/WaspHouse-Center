@@ -1,5 +1,6 @@
 # WaspHouse-Center
 ## Overview 
+[WaspHouse-Ward](https://github.com/PUT-PTM/WaspHouse-Ward)
 ## Description
 ## Tools 
 ## How to run
@@ -7,7 +8,6 @@
 ## Future improvements
 ## Attributions 
 ## License 
-#### [cos tu napisalem](http://www.google.com)
 ## Credits
 Grzegorz Osak, Szymon Zieliński
 
