@@ -36,3 +36,6 @@
 *.map
 *.xml
 *.pbxproj
+*.cogui
+*.comarker
+*.coproj
