@@ -7,7 +7,9 @@
 #include <stdio.h>
 #include <stdarg.h>
 
+//must be :)
 #include <semihosting.h>
+
 /**
  * @brief  Transmit a char, if you want to use printf(), 
  *         you need implement this function
@@ -21,6 +23,8 @@ void PrintChar(char c)
 	   while(Transfer not completed);
 	   Transmit a char;
 	*/	
+
+	//must be :)
 	SH_SendChar(c);
 }
 
@@ -30,7 +34,7 @@ void PrintChar(char c)
 
 /** Required for proper compilation. */
 struct _reent r = {0, (FILE *) 0, (FILE *) 1, (FILE *) 0};
-struct _reent *_impure_ptr = &r;
+//struct _reent *_impure_ptr = &r;
 
 /**
  * @brief  Writes a character inside the given string. Returns 1.

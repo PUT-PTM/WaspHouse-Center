@@ -24,7 +24,7 @@ static char g_buf_len = 0;
  * @return Character to write.
  *****************************************************************************/
 void SH_SendChar(int ch) {
-	g_buf[g_buf_len++] = ch;
+	g_buf[g_buf_len++] = (char) ch;
 	g_buf[g_buf_len] = '\0';
 	if (g_buf_len + 1 >= sizeof(g_buf) || ch == '\n' || ch == '\0') {
 		g_buf_len = 0;
@@ -42,9 +42,7 @@ void SH_SendChar(int ch) {
  *
  * @return Character to write.
  *****************************************************************************/
-void SH_SendString(const char *str)
-{
-	int j;
+void SH_SendString(const char *str) {
 	if (SH_DoCommand(0x04, (int)str, NULL) != 0) {
 		return;
 	}

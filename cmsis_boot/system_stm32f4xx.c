@@ -509,7 +509,6 @@ void SystemInit_ExtMemCtl(void)
   FSMC_Bank1E->BWTR[2] = 0x0fffffff;
 /*
   Bank1_SRAM2 is configured as follow:
-
   p.FSMC_AddressSetupTime = 3;
   p.FSMC_AddressHoldTime = 0;
   p.FSMC_DataSetupTime = 6;
@@ -517,7 +516,6 @@ void SystemInit_ExtMemCtl(void)
   p.FSMC_CLKDivision = 0;
   p.FSMC_DataLatency = 0;
   p.FSMC_AccessMode = FSMC_AccessMode_A;
-
   FSMC_NORSRAMInitStructure.FSMC_Bank = FSMC_Bank1_NORSRAM2;
   FSMC_NORSRAMInitStructure.FSMC_DataAddressMux = FSMC_DataAddressMux_Disable;
   FSMC_NORSRAMInitStructure.FSMC_MemoryType = FSMC_MemoryType_PSRAM;

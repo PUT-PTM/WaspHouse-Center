@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<Project version="2G - 1.7.8" name="WaspHouse-Center">
-  <Target name="WaspHouse-Center" isCurrent="1">
+<Project version="2G - 1.7.8" name="WapsCenter_1_1">
+  <Target name="WapsCenter_1_1" isCurrent="1">
     <Device manufacturerId="9" manufacturerName="ST" chipId="344" chipName="STM32F407VG" boardId="" boardName=""/>
     <BuildOption>
       <Compile>
@@ -33,12 +33,12 @@
           <Memory name="IROM2" type="ReadOnly" size="" startValue=""/>
           <Memory name="IRAM2" type="ReadWrite" size="0x00010000" startValue="0x10000000"/>
         </MemoryAreas>
-        <LocateLinkFile path="../../configuration/programdata/wasphouse-center/arm-gcc-link.ld" type="0"/>
+        <LocateLinkFile path="../../configuration/programdata/wapscenter_1_1/arm-gcc-link.ld" type="0"/>
       </Link>
       <Output>
         <Option name="OutputFileType" value="0"/>
         <Option name="Path" value="./"/>
-        <Option name="Name" value="WaspHouse-Center"/>
+        <Option name="Name" value="WapsCenter_1_1"/>
         <Option name="HEX" value="1"/>
         <Option name="BIN" value="1"/>
       </Output>
@@ -76,6 +76,7 @@
     <Component id="501" name="RCC" path="" type="2"/>
     <Component id="504" name="GPIO" path="" type="2"/>
     <Component id="505" name="EXTI" path="" type="2"/>
+    <Component id="509" name="SPI" path="" type="2"/>
     <Component id="513" name="TIM" path="" type="2"/>
     <Component id="517" name="USART" path="" type="2"/>
     <Component id="524" name="MISC" path="" type="2"/>
@@ -83,40 +84,58 @@
   </Components>
   <Files>
     <File name="cmsis_lib/source/stm32f4xx_gpio.c" path="cmsis_lib/source/stm32f4xx_gpio.c" type="1"/>
-    <File name="cmsis_boot/startup/startup_stm32f4xx.c" path="cmsis_boot/startup/startup_stm32f4xx.c" type="1"/>
     <File name="cmsis_lib/source/stm32f4xx_usart.c" path="cmsis_lib/source/stm32f4xx_usart.c" type="1"/>
-    <File name="cmsis_lib/source/stm32f4xx_rcc.c" path="cmsis_lib/source/stm32f4xx_rcc.c" type="1"/>
-    <File name="cmsis/core_cmInstr.h" path="cmsis/core_cmInstr.h" type="1"/>
-    <File name="printf.c" path="stdio/printf.c" type="1"/>
+    <File name="ff.h" path="ff.h" type="1"/>
     <File name="cmsis_boot" path="" type="2"/>
     <File name="cmsis_lib/include/stm32f4xx_syscfg.h" path="cmsis_lib/include/stm32f4xx_syscfg.h" type="1"/>
+    <File name="delay.h" path="delay.h" type="1"/>
+    <File name="spi_sd.c" path="spi_sd.c" type="1"/>
     <File name="cmsis_lib/include/stm32f4xx_usart.h" path="cmsis_lib/include/stm32f4xx_usart.h" type="1"/>
+    <File name="protocol.h" path="protocol.h" type="1"/>
+    <File name="semihosting/sh_cmd.s" path="semihosting/sh_cmd.s" type="1"/>
+    <File name="cmsis_boot/stm32f4xx.h" path="cmsis_boot/stm32f4xx.h" type="1"/>
+    <File name="integer.h" path="integer.h" type="1"/>
     <File name="cmsis/core_cm4_simd.h" path="cmsis/core_cm4_simd.h" type="1"/>
     <File name="cmsis_boot/startup" path="" type="2"/>
-    <File name="cmsis_boot/stm32f4xx.h" path="cmsis_boot/stm32f4xx.h" type="1"/>
+    <File name="cmsis_lib/source/stm32f4xx_spi.c" path="cmsis_lib/source/stm32f4xx_spi.c" type="1"/>
     <File name="cmsis/core_cmFunc.h" path="cmsis/core_cmFunc.h" type="1"/>
-    <File name="cmsis_lib/source/stm32f4xx_exti.c" path="cmsis_lib/source/stm32f4xx_exti.c" type="1"/>
-    <File name="cmsis_lib/include/stm32f4xx_exti.h" path="cmsis_lib/include/stm32f4xx_exti.h" type="1"/>
-    <File name="semihosting.c" path="semihosting/semihosting.c" type="1"/>
     <File name="cmsis/core_cm4.h" path="cmsis/core_cm4.h" type="1"/>
-    <File name="cmsis_boot/system_stm32f4xx.c" path="cmsis_boot/system_stm32f4xx.c" type="1"/>
-    <File name="dht11.h" path="dht11.h" type="1"/>
-    <File name="cmsis" path="" type="2"/>
+    <File name="semihosting/semihosting.c" path="semihosting/semihosting.c" type="1"/>
+    <File name="ccsbcs.c" path="ccsbcs.c" type="1"/>
     <File name="cmsis_lib/source/misc.c" path="cmsis_lib/source/misc.c" type="1"/>
     <File name="cmsis_lib/include/stm32f4xx_tim.h" path="cmsis_lib/include/stm32f4xx_tim.h" type="1"/>
-    <File name="cmsis_lib" path="" type="2"/>
+    <File name="ff.c" path="ff.c" type="1"/>
     <File name="cmsis_lib/source" path="" type="2"/>
+    <File name="jsmn.c" path="jsmn.c" type="1"/>
+    <File name="cmsis_boot/stm32f4xx_conf.h" path="cmsis_boot/stm32f4xx_conf.h" type="1"/>
+    <File name="cmsis_boot/system_stm32f4xx.h" path="cmsis_boot/system_stm32f4xx.h" type="1"/>
+    <File name="stdio/printf.c" path="stdio/printf.c" type="1"/>
+    <File name="ffconf.h" path="ffconf.h" type="1"/>
+    <File name="cmsis_lib/include/stm32f4xx_rcc.h" path="cmsis_lib/include/stm32f4xx_rcc.h" type="1"/>
+    <File name="cstring.h" path="cstring.h" type="1"/>
+    <File name="protocol.c" path="protocol.c" type="1"/>
+    <File name="cmsis_lib/source/stm32f4xx_syscfg.c" path="cmsis_lib/source/stm32f4xx_syscfg.c" type="1"/>
+    <File name="sd_lib.h" path="sd_lib.h" type="1"/>
+    <File name="jsmn.h" path="jsmn.h" type="1"/>
+    <File name="cmsis_boot/startup/startup_stm32f4xx.c" path="cmsis_boot/startup/startup_stm32f4xx.c" type="1"/>
+    <File name="stdio" path="" type="2"/>
+    <File name="cmsis_lib/source/stm32f4xx_rcc.c" path="cmsis_lib/source/stm32f4xx_rcc.c" type="1"/>
+    <File name="cmsis/core_cmInstr.h" path="cmsis/core_cmInstr.h" type="1"/>
+    <File name="semihosting" path="" type="2"/>
+    <File name="cmsis_lib/source/stm32f4xx_exti.c" path="cmsis_lib/source/stm32f4xx_exti.c" type="1"/>
+    <File name="cmsis_lib/include/stm32f4xx_exti.h" path="cmsis_lib/include/stm32f4xx_exti.h" type="1"/>
+    <File name="cmsis_boot/system_stm32f4xx.c" path="cmsis_boot/system_stm32f4xx.c" type="1"/>
+    <File name="cmsis_lib/include/stm32f4xx_spi.h" path="cmsis_lib/include/stm32f4xx_spi.h" type="1"/>
+    <File name="diskio.h" path="diskio.h" type="1"/>
+    <File name="cmsis" path="" type="2"/>
+    <File name="cmsis_lib" path="" type="2"/>
     <File name="cmsis_lib/source/stm32f4xx_tim.c" path="cmsis_lib/source/stm32f4xx_tim.c" type="1"/>
-    <File name="sh_cmd.s" path="semihosting/sh_cmd.s" type="1"/>
+    <File name="spi_sd.h" path="spi_sd.h" type="1"/>
     <File name="cmsis_lib/include/stm32f4xx_gpio.h" path="cmsis_lib/include/stm32f4xx_gpio.h" type="1"/>
     <File name="cmsis_lib/include/misc.h" path="cmsis_lib/include/misc.h" type="1"/>
-    <File name="cmsis_boot/stm32f4xx_conf.h" path="cmsis_boot/stm32f4xx_conf.h" type="1"/>
-    <File name="dht11.c" path="dht11.c" type="1"/>
-    <File name="cmsis_boot/system_stm32f4xx.h" path="cmsis_boot/system_stm32f4xx.h" type="1"/>
     <File name="cmsis_lib/include" path="" type="2"/>
-    <File name="cmsis_lib/include/stm32f4xx_rcc.h" path="cmsis_lib/include/stm32f4xx_rcc.h" type="1"/>
-    <File name="semihosting.h" path="semihosting/semihosting.h" type="1"/>
-    <File name="cmsis_lib/source/stm32f4xx_syscfg.c" path="cmsis_lib/source/stm32f4xx_syscfg.c" type="1"/>
+    <File name="semihosting/semihosting.h" path="semihosting/semihosting.h" type="1"/>
+    <File name="delay.c" path="delay.c" type="1"/>
     <File name="main.c" path="main.c" type="1"/>
   </Files>
 </Project>
